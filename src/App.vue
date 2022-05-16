@@ -1,9 +1,10 @@
 <template>
-  <header class="flex">
-    <icon-logo />
-    <FilmIcon class="h-5 w-5 fill-blue-300 stroke-blue-600" />
-    <nav class="flex-auto">
-      <RouterLink to="/" class="text-blue-600 underline">Accueil</RouterLink>
+  <header class="flex flex-auto">
+    <RouterLink to="/" class="text-blue-600 underline"
+      ><icon-logo />
+      <h1 class="flex">Estatery</h1></RouterLink
+    >
+    <nav class="">
       <button class="texte-xl relative z-50" aria-haspopup="true" :aria-expanded="menu" @click="menuOuvert = !menuOuvert">
         <MenuIcon class="h-5 w-5" />
         <span class="sr-only">Menu</span>
@@ -16,6 +17,8 @@
   <!-- Composant /src/components/Bouton.vue 
     Exemple d'usage de slot pour le contenu -->
   <Bouton class="grid grid-cols-[repeat(auto-fit,minmax(1rem,max-content))]">Test de bouton</Bouton>
+
+  <SearchBar>Search with Search Bar</SearchBar>
 
   <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(10rem,max-content))] gap-10 p-2">
     <!-- Les images sont simplement l'URL absolue (depuis la racine, débute par '/' )
@@ -31,7 +34,7 @@
 
   <div
     id="menu"
-    class="fixed inset-0 translate-x-full bg-red-200 motion-safe:transition-transform motion-safe:duration-1000"
+    class="fixed inset-0 translate-x-full bg-indigo-500 motion-safe:transition-transform motion-safe:duration-1000"
     :class="{ 'translate-x-0': menuOuvert }"
   >
     <ul class="hidden flex-auto justify-center gap-2 sm:flex">
@@ -49,6 +52,7 @@ import { FilmIcon } from "@heroicons/vue/outline";
 import card from "./components/card.vue";
 import Bouton from "./components/Bouton.vue";
 import { MenuIcon } from "@heroicons/vue/solid";
+import SearchBar from "./components/SearchBar.vue";
 export default {
   name: "App",
   data() {
@@ -56,6 +60,6 @@ export default {
       menuOuvert: false,
     };
   },
-  components: { IconLogo, FilmIcon, card, Bouton, MenuIcon },
+  components: { IconLogo, FilmIcon, card, Bouton, MenuIcon, SearchBar },
 };
 </script>
