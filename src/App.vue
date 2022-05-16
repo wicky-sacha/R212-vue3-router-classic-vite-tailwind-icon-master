@@ -11,13 +11,12 @@
       </button>
     </nav>
   </header>
-
   <RouterView />
-
+  <br />
   <!-- Composant /src/components/Bouton.vue 
     Exemple d'usage de slot pour le contenu -->
   <Bouton class="grid grid-cols-[repeat(auto-fit,minmax(1rem,max-content))]">Test de bouton</Bouton>
-
+  <br />
   <SearchBar>Search with Search Bar</SearchBar>
 
   <div class="grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(10rem,max-content))] gap-10 p-2">
