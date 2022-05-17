@@ -1,10 +1,11 @@
 <template>
-  <header class="flex flex-auto">
-    <RouterLink to="/" class="text-blue-600 underline"
-      ><icon-logo />
-      <h1 class="flex">Estatery</h1></RouterLink
-    >
-    <nav class="">
+  <header>
+    <nav class="flex h-20 justify-between bg-indigo-50 px-6">
+      <RouterLink to="/" class="flex items-center gap-2 text-xl font-bold"
+        ><icon-logo />
+        <h1 class="">Estatery</h1>
+      </RouterLink>
+
       <button class="texte-xl relative z-50" aria-haspopup="true" :aria-expanded="menu" @click="menuOuvert = !menuOuvert">
         <MenuIcon class="h-5 w-5" />
         <span class="sr-only">Menu</span>
@@ -15,7 +16,7 @@
   <br />
   <!-- Composant /src/components/Bouton.vue 
     Exemple d'usage de slot pour le contenu -->
-  <Bouton class="grid grid-cols-[repeat(auto-fit,minmax(1rem,max-content))]">Test de bouton</Bouton>
+  <Bouton class="grid grid-cols-[repeat(auto-fit,minmax(1rem,max-content))]">Bouton</Bouton>
   <br />
   <SearchBar>Search with Search Bar</SearchBar>
 
